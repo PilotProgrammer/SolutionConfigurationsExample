@@ -11,12 +11,12 @@ namespace SolutionConfigurationsClassLibraryClient
     {
         static void Main(string[] args)
         {
-            DatabaseConnection conn = new DatabaseConnection();
-            WebServiceClient ws = new WebServiceClient();
+            var dataAccessSettings = new ExternalDataAccessSettings();
+            DatabaseConnection conn = new DatabaseConnection(dataAccessSettings);
+            WebServiceClient ws = new WebServiceClient(dataAccessSettings);
 
-            FancyCalculator calc = new FancyCalculator(conn, ws, true);
-            int result = calc.DoFancyStuffWithANumber(5, true);
-            Console.WriteLine(result.ToString());
+            FancyCalculator calc = new FancyCalculator(conn, ws);
+            int result = calc.DoFancyStuffWithANumber(5);
             Console.ReadLine();
         }
     }
