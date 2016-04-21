@@ -8,19 +8,19 @@ namespace SolutionConfigurationsClassLibrary
 {
     public class WebServiceClient
     {
-        public string sendMessage(string messageToSend)
-        {
-            string returnStatus = null;
+        protected string webServiceUrl;
 
+        public WebServiceClient(IExternalDataAccessSettings settings)
+        {
+            webServiceUrl = settings.getWebServiceUrl();
+        }
+
+        public void sendMessage(string messageToSend)
+        {
             if (string.IsNullOrEmpty(messageToSend) == true)
                 throw new Exception("Can't send an empty message. Sorry 'bout that!");
 
-#if DEBUG
-            returnStatus = "Following message sent to TEST web service: " + messageToSend;
-#else
-            returnStatus = "Following message sent to PROD web service: " + messageToSend;
-#endif
-            return returnStatus;
+            Console.WriteLine("Following message sent to " + this.webServiceUrl + " web service: " + messageToSend);
         }
     }
 }
