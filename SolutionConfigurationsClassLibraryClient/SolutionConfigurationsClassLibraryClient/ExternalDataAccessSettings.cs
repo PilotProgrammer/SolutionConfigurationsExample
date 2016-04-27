@@ -10,13 +10,13 @@ namespace SolutionConfigurationsClassLibraryClient
 {
     public class ExternalDataAccessSettings : IExternalDataAccessSettings
     {
-        public string getDatabaseName()
+        public string GetDatabaseName()
         {
             var databaseName = ConfigurationManager.AppSettings.Get("PrimaryDatabase");
             return databaseName;
         }
 
-        public string getWebServiceUrl()
+        public string GetWebServiceUrl()
         {
             var webserviceUrl = ConfigurationManager.AppSettings.Get("PrimaryWebService");
             return webserviceUrl;
