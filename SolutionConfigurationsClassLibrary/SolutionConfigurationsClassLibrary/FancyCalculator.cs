@@ -8,39 +8,39 @@ namespace SolutionConfigurationsClassLibrary
 {
     public class FancyCalculator
     {
-        protected DatabaseConnection dbConn;
-        protected WebServiceClient wsClient;
+        protected DatabaseConnection DbConn;
+        protected WebServiceClient WsClient;
 
         public FancyCalculator(DatabaseConnection dbConn, WebServiceClient wsClient)
         {
-            this.dbConn = dbConn;
-            this.wsClient = wsClient;
+            this.DbConn = dbConn;
+            this.WsClient = wsClient;
         }
 
         public int DoFancyStuffWithANumber(int aNumber)
         {
-            var multiplier = this.getMultiplierValueFromDatabase();
-            var result = this.makeCalculation(multiplier);
-            this.reportResultsToWebService(result);
+            var multiplier = this.GetMultiplierValueFromDatabase();
+            var result = this.MakeCalculation(multiplier);
+            this.ReportResultsToWebService(result);
 
             return result;
         }
 
-        protected int getMultiplierValueFromDatabase()
+        protected int GetMultiplierValueFromDatabase()
         {
-            this.dbConn.connect();
-            return this.dbConn.getValueToUseForCalculation();
+            this.DbConn.Connect();
+            return this.DbConn.GetValueToUseForCalculation();
         }
 
-        protected int makeCalculation(int multiplierValue)
+        protected int MakeCalculation(int multiplierValue)
         {
             int result = multiplierValue * 10;
             return result;
         }
 
-        protected void reportResultsToWebService(int result)
+        protected void ReportResultsToWebService(int result)
         {
-            this.wsClient.sendMessage("Result of FancyCalculator: " + result.ToString());
+            this.WsClient.SendMessage("Result of FancyCalculator: " + result.ToString());
         }
     }
 
