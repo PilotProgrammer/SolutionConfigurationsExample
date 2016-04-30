@@ -15,6 +15,12 @@ namespace SolutionConfigurationsClassLibrary
             this.WebServiceUrl = settings.WebServiceUrl;
         }
 
+        public WebServiceClient()
+            : this(new DefaultExternalDataAccessSettings())
+        {
+
+        }
+
         public void SendMessage(string messageToSend)
         {
             if (string.IsNullOrEmpty(messageToSend) == true)

@@ -15,6 +15,12 @@ namespace SolutionConfigurationsClassLibrary
             this.DatabaseName = settings.DatabaseName;
         }
 
+        public DatabaseConnection()
+            : this(new DefaultExternalDataAccessSettings())
+        {
+
+        }
+
         public void Connect()
         {
             Console.WriteLine("Just connected to " + this.DatabaseName + " database!");
