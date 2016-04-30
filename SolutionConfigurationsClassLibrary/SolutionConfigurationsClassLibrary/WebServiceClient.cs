@@ -12,7 +12,7 @@ namespace SolutionConfigurationsClassLibrary
 
         public WebServiceClient(IExternalDataAccessSettings settings)
         {
-            this.WebServiceUrl = settings.GetWebServiceUrl();
+            this.WebServiceUrl = settings.WebServiceUrl;
         }
 
         public void SendMessage(string messageToSend)

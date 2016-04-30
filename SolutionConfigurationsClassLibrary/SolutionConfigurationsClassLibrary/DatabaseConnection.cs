@@ -12,7 +12,7 @@ namespace SolutionConfigurationsClassLibrary
 
         public DatabaseConnection(IExternalDataAccessSettings settings)
         {
-            this.DatabaseName = settings.GetDatabaseName();
+            this.DatabaseName = settings.DatabaseName;
         }
 
         public void Connect()

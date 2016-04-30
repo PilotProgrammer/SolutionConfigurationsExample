@@ -8,7 +8,13 @@ namespace SolutionConfigurationsClassLibrary
 {
     public interface IExternalDataAccessSettings
     {
-        string GetDatabaseName();
-        string GetWebServiceUrl();
+        string DatabaseName
+        {
+            get;
+        }
+        string WebServiceUrl
+        {
+            get;
+        }
     }
 }
