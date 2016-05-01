@@ -14,7 +14,7 @@ namespace SolutionConfigurationsClassLibrary
         {
             get
             {
-                var databaseName = Properties.Settings.Default.PrimaryDatabase;
+                var databaseName = ConfigurationManager.ConnectionStrings["SolutionConfigurationsClassLibrary.Properties.Settings.PrimaryDatabase"].ConnectionString;
                 return databaseName;
             }
         }

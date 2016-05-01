@@ -25,6 +25,7 @@ namespace SolutionConfigurationsClassLibrary.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("DEFAULT")]
         public string PrimaryDatabase {
             get {
@@ -32,15 +33,13 @@ namespace SolutionConfigurationsClassLibrary.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
         [global::System.Configuration.DefaultSettingValueAttribute("DEFAULT")]
         public string PrimaryWebService {
             get {
                 return ((string)(this["PrimaryWebService"]));
-            }
-            set {
-                this["PrimaryWebService"] = value;
             }
         }
     }
