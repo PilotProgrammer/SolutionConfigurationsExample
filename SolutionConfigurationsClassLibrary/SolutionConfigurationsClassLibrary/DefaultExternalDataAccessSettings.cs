@@ -14,7 +14,13 @@ namespace SolutionConfigurationsClassLibrary
         {
             get
             {
-                var databaseName = ConfigurationManager.ConnectionStrings["SolutionConfigurationsClassLibrary.Properties.Settings.PrimaryDatabase"].ConnectionString;
+                string databaseName = null;
+                var connectionName = "SolutionConfigurationsClassLibrary.Properties.Settings.PrimaryDatabase";
+
+                if (ConfigurationManager.ConnectionStrings[connectionName] != null)
+                    databaseName = ConfigurationManager.ConnectionStrings[connectionName].ConnectionString;
+                else
+                    throw new Exception("Client solution must define connection for " + connectionName);
                 return databaseName;
             }
         }
@@ -24,6 +30,10 @@ namespace SolutionConfigurationsClassLibrary
             get
             {
                 var webserviceUrl = Properties.Settings.Default.PrimaryWebService;
+
+                if (webserviceUrl == null || (webserviceUrl == "NOT_DEFINED"))
+                    throw new Exception("Client solution must define web service url");
+
                 return webserviceUrl;
             }
         }

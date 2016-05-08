@@ -12,9 +12,9 @@ namespace SolutionConfigurationsClassLibraryClient
         static void Main(string[] args)
         {
             // the database connection will vary based on debug/release
-            DatabaseConnection conn = new DatabaseConnection();
+            //var dataAccessSettings = new ExternalDataAccessSettings();
 
-            var dataAccessSettings = new ExternalDataAccessSettings();
+            DatabaseConnection conn = new DatabaseConnection();
             WebServiceClient ws = new WebServiceClient();
             
             FancyCalculator calc = new FancyCalculator(conn, ws);

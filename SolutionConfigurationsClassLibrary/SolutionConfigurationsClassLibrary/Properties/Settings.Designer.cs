@@ -25,21 +25,21 @@ namespace SolutionConfigurationsClassLibrary.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("DEFAULT")]
-        public string PrimaryDatabase {
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
+        [global::System.Configuration.DefaultSettingValueAttribute("NOT_DEFINED")]
+        public string PrimaryWebService {
             get {
-                return ((string)(this["PrimaryDatabase"]));
+                return ((string)(this["PrimaryWebService"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("DEFAULT")]
-        public string PrimaryWebService {
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("NOT_DEFINED")]
+        public string PrimaryDatabase {
             get {
-                return ((string)(this["PrimaryWebService"]));
+                return ((string)(this["PrimaryDatabase"]));
             }
         }
     }
