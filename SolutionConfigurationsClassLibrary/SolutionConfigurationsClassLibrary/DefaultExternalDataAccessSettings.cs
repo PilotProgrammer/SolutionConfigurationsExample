@@ -8,9 +8,9 @@ using System.Configuration;
 
 namespace SolutionConfigurationsClassLibrary
 {
-    class DefaultExternalDataAccessSettings : IExternalDataAccessSettings
+    public class DefaultExternalDataAccessSettings : IExternalDataAccessSettings
     {
-        public string DatabaseName
+        public virtual string DatabaseName
         {
             get
             {
@@ -25,7 +25,7 @@ namespace SolutionConfigurationsClassLibrary
             }
         }
 
-        public string WebServiceUrl
+        public virtual string WebServiceUrl
         {
             get
             {

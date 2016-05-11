@@ -17,9 +17,7 @@ namespace SolutionConfigurationsClassLibrary
 
         public DatabaseConnection()
             : this(new DefaultExternalDataAccessSettings())
-        {
-
-        }
+        { }
 
         public void Connect()
         {

@@ -17,9 +17,7 @@ namespace SolutionConfigurationsClassLibrary
 
         public WebServiceClient()
             : this(new DefaultExternalDataAccessSettings())
-        {
-
-        }
+        { }
 
         public void SendMessage(string messageToSend)
         {
