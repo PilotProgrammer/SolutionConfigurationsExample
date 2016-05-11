@@ -43,5 +43,4 @@ namespace SolutionConfigurationsClassLibrary
             this.WsClient.SendMessage("Result of FancyCalculator: " + result.ToString());
         }
     }
-
 }

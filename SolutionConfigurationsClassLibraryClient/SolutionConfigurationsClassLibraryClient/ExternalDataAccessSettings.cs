@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SolutionConfigurationsClassLibrary;
-using System.Configuration;
 
 namespace SolutionConfigurationsClassLibraryClient
 {
@@ -13,19 +12,13 @@ namespace SolutionConfigurationsClassLibraryClient
         public string DatabaseName
         {
             get
-            {
-                var databaseName = ConfigurationManager.AppSettings.Get("PrimaryDatabase");
-                return databaseName;
-            }
+            { return "CONNECTION_STRING_OVERRIDE"; }
         }
 
         public string WebServiceUrl
         {
             get
-            {
-                var webserviceUrl = ConfigurationManager.AppSettings.Get("PrimaryWebService");
-                return webserviceUrl;
-            }
+            { return "URL_OVERRIDE"; }
         }
     }
 }
