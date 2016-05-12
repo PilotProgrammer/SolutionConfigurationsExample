@@ -4,22 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SolutionConfigurationsClassLibrary;
-using System.Configuration;
 
 namespace SolutionConfigurationsClassLibraryClient
 {
     public class ExternalDataAccessSettings : IExternalDataAccessSettings
     {
-        public string getDatabaseName()
+        public string DatabaseName
         {
-            var databaseName = ConfigurationManager.AppSettings.Get("PrimaryDatabase");
-            return databaseName;
+            get
+            { return "CONNECTION_STRING_OVERRIDE"; }
         }
 
-        public string getWebServiceUrl()
+        public string WebServiceUrl
         {
-            var webserviceUrl = ConfigurationManager.AppSettings.Get("PrimaryWebService");
-            return webserviceUrl;
+            get
+            { return "URL_OVERRIDE"; }
         }
     }
 }

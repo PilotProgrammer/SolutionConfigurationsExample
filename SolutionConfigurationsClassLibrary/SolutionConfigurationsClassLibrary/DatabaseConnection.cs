@@ -8,25 +8,29 @@ namespace SolutionConfigurationsClassLibrary
 {
     public class DatabaseConnection
     {
-        protected string databaseName;
+        protected string DatabaseName;
 
         public DatabaseConnection(IExternalDataAccessSettings settings)
         {
-            databaseName = settings.getDatabaseName();
+            this.DatabaseName = settings.DatabaseName;
         }
 
-        public void connect()
+        public DatabaseConnection()
+            : this(new DefaultExternalDataAccessSettings())
+        { }
+
+        public void Connect()
         {
-            Console.WriteLine("Just connected to " + this.databaseName + " database!");
+            Console.WriteLine("Just connected to " + this.DatabaseName + " database!");
         }
 
-        public int getValueToUseForCalculation()
+        public int GetValueToUseForCalculation()
         {
             int value = 0;
 
-            if (this.databaseName == "TEST")
+            if (this.DatabaseName == "TEST")
                 value = 5;
-            else if (this.databaseName == "PROD")
+            else if (this.DatabaseName == "PROD")
                 value = 10;
 
             return value;

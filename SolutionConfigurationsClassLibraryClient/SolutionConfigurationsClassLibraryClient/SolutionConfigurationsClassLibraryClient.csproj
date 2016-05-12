@@ -37,7 +37,6 @@
       <HintPath>..\..\SolutionConfigurationsClassLibrary\SolutionConfigurationsClassLibrary\bin\Release\SolutionConfigurationsClassLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -52,7 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="Config\App.release.config" />
     <None Include="Config\App.debug.config">
       <SubType>Designer</SubType>
